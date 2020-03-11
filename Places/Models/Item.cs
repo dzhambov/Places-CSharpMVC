@@ -5,12 +5,20 @@ namespace Places.Models
   public class Item
 {
   public string Description { get; set; }
+  public string Date { get; set;}
+  public string Location { get; set; }
+  public string Duration { get; set; }
+  public string Companion { get; set; }
   public int Id { get; }
   private static List<Item> _instances = new List<Item> {};
 
-    public Item(string description)
+    public Item(string description, string date, string location, string duration, string companion)
     {
       Description = description;
+      Date = date;
+      Location = location;
+      Duration = duration;
+      Companion = companion;
       _instances.Add(this);
       Id = _instances.Count;
     }

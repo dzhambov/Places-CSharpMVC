@@ -20,9 +20,9 @@ namespace Places.Controllers
     }
 
     [HttpPost("/items")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string description, string date, string location, string duration, string companion)
     {
-      Item myItem = new Item(description);
+      Item myItem = new Item(description, date, location, location , companion);
       return RedirectToAction("Index");
     }
 
